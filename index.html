@@ -4,286 +4,492 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111827">
-  <meta name="description" content="Washmart-Vaishali – laundry, dry cleaning, sofa, carpet, curtain, blanket, toy and car cleaning with pickup & drop.">
-  <title>Washmart-Vaishali | Your Clothes, Our Care</title>
+  <meta
+    name="description"
+    content="Washmart-Vaishali – Laundry, Dry Cleaning, Sofa Cleaning, Carpet Cleaning, Curtain Cleaning, Blanket Cleaning, Toy Cleaning, Car Dry Cleaning and Pickup & Drop."
+  >
+
+  <title>Washmart-Vaishali</title>
 
   <style>
     :root {
-      --ink:#111827;
-      --muted:#64748b;
-      --card:#ffffff;
-      --bg:#f5f7fb;
-      --accent:#f59e0b;
-      --green:#16a34a;
-      --line:#e5e7eb;
+      --ink: #111827;
+      --muted: #64748b;
+      --card: #ffffff;
+      --bg: #f5f7fb;
+      --accent: #f59e0b;
+      --green: #16a34a;
+      --line: #e5e7eb;
+      --blue: #2563eb;
     }
 
     * {
-      box-sizing:border-box;
+      box-sizing: border-box;
     }
 
     body {
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--ink);
-      background:var(--bg);
-      line-height:1.5;
+      margin: 0;
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
     }
 
     .wrap {
-      max-width:720px;
-      margin:auto;
-      padding:18px;
+      max-width: 720px;
+      margin: auto;
+      padding: 14px;
     }
 
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background:linear-gradient(135deg,#111827 0%,#1f2937 70%,#374151 100%);
-      color:#fff;
-      border-radius:24px;
-      padding:30px 22px 24px;
-      margin-bottom:16px;
-      box-shadow:0 12px 30px rgba(15,23,42,.16);
+      background:
+        linear-gradient(
+          135deg,
+          #111827 0%,
+          #1f2937 70%,
+          #374151 100%
+        );
+
+      color: #fff;
+      border-radius: 24px;
+      padding: 26px 20px 22px;
+      margin-bottom: 14px;
+
+      box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.16);
     }
 
     .brand {
-      display:flex;
-      align-items:center;
-      gap:14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
     .logo {
-      width:72px;
-      height:58px;
-      border-radius:12px;
-      background:#fff;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-      flex:none;
+      width: 76px;
+      height: 60px;
+
+      border-radius: 12px;
+      background: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .logo img {
-      width:100%;
-      height:100%;
-      object-fit:contain;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     h1 {
-      margin:0;
-      font-size:31px;
-      letter-spacing:-1px;
+      margin: 0;
+      font-size: 29px;
+      line-height: 1.1;
+      letter-spacing: -0.8px;
     }
 
     .tagline {
-      margin:3px 0 0;
-      color:#dbeafe;
-      font-size:15px;
+      margin-top: 5px;
+      color: #dbeafe;
+      font-size: 14px;
     }
 
     .hero {
-      margin-top:22px;
+      margin-top: 18px;
     }
 
     .hero p {
-      margin:0;
-      color:#e5e7eb;
-      font-size:15px;
+      margin: 0;
+      color: #e5e7eb;
+      font-size: 14px;
     }
 
+    /* =========================
+       BUTTONS
+    ========================= */
+
     .actions {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin-top:18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 15px;
     }
 
     .btn {
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      min-height:48px;
-      padding:12px 14px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:750;
-      border:1px solid rgba(255,255,255,.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 7px;
+
+      min-height: 46px;
+
+      padding: 10px 13px;
+
+      border-radius: 13px;
+
+      text-decoration: none;
+
+      font-weight: 750;
+      font-size: 14px;
+
+      border: 1px solid var(--line);
+
+      cursor: pointer;
     }
 
     .primary {
-      background:var(--accent);
-      color:#111827;
+      background: var(--accent);
+      color: #111827;
+      border-color: transparent;
     }
 
     .whatsapp {
-      background:var(--green);
-      color:#fff;
+      background: var(--green);
+      color: #fff;
+      border-color: transparent;
     }
 
+    /* =========================
+       SECTIONS
+    ========================= */
+
     .section {
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:20px;
-      margin:14px 0;
-      box-shadow:0 5px 18px rgba(15,23,42,.05);
+      background: var(--card);
+
+      border: 1px solid var(--line);
+
+      border-radius: 18px;
+
+      padding: 17px;
+
+      margin: 12px 0;
+
+      box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
     }
 
     h2 {
-      margin:0 0 14px;
-      font-size:20px;
+      margin: 0 0 12px;
+
+      font-size: 19px;
+
+      letter-spacing: -0.2px;
     }
 
-    .service-grid {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
+    /* =========================
+       SAVE CONTACT
+    ========================= */
+
+    .save-contact-description {
+      margin: 0 0 12px;
+
+      color: var(--muted);
+
+      font-size: 13px;
     }
 
-    .service {
-      padding:14px;
-      background:#f8fafc;
-      border-radius:14px;
-      font-weight:650;
+    .save-contact-btn {
+      width: 100%;
+
+      background: #111827;
+
+      color: #fff;
+
+      border: none;
     }
 
-    .service span {
-      display:block;
-      font-size:22px;
-      margin-bottom:5px;
-    }
+    /* =========================
+       LOCATIONS
+    ========================= */
 
     .location {
-      padding:15px;
-      border:1px solid var(--line);
-      border-radius:15px;
-      margin-top:11px;
+      padding: 13px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 14px;
+
+      margin-top: 10px;
+
+      background: #fff;
     }
 
     .location strong {
-      display:block;
-      margin-bottom:12px;
+      display: block;
+
+      margin-bottom: 11px;
+
+      font-size: 15px;
     }
 
     /*
       IMPORTANT:
-      Images are displayed at their natural aspect ratio.
-      Nothing is cropped.
+      Images use natural aspect ratio.
+      Nothing gets cropped.
     */
+
     .location-image {
-      width:100%;
-      height:auto;
-      display:block;
-      object-fit:contain;
-      border-radius:12px;
-      margin:0 0 14px;
+      width: 100%;
+
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+
+      border-radius: 11px;
+
+      margin-bottom: 12px;
     }
 
     .address {
-      color:var(--muted);
-      font-size:14px;
-      margin-bottom:11px;
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.45;
+
+      margin-bottom: 10px;
     }
 
     .mapbtn {
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      padding:10px 13px;
-      border-radius:11px;
-      background:#eff6ff;
-      color:#1d4ed8;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 6px;
+
+      padding: 9px 12px;
+
+      border-radius: 10px;
+
+      background: #eff6ff;
+
+      color: #1d4ed8;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      font-size: 13px;
     }
 
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 7px;
+    }
+
+    .service {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 9px 10px;
+
+      background: #f8fafc;
+
+      border-radius: 10px;
+
+      font-weight: 650;
+
+      font-size: 13px;
+
+      line-height: 1.25;
+    }
+
+    .service span {
+      font-size: 18px;
+
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       APP SECTION
+    ========================= */
+
+    .website-button {
+      margin-top: 9px;
+
+      background: #eef2ff;
+
+      color: #1e3a8a;
+
+      border-color: #dbeafe;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact-row {
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
     }
 
     .contact {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      padding:13px 14px;
-      background:#f8fafc;
-      border-radius:13px;
-      text-decoration:none;
-      color:inherit;
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 11px 13px;
+
+      background: #f8fafc;
+
+      border-radius: 11px;
+
+      text-decoration: none;
+
+      color: inherit;
     }
 
     .contact small {
-      display:block;
-      color:var(--muted);
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 12px;
     }
 
     .contact b {
-      font-size:15px;
-      overflow-wrap:anywhere;
+      font-size: 14px;
+
+      overflow-wrap: anywhere;
     }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-      padding:10px 0 24px;
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      padding: 8px 0 20px;
     }
 
-    @media (max-width:430px) {
-      .service-grid {
-        grid-template-columns:1fr;
-      }
+    /* =========================
+       MOBILE
+    ========================= */
 
-      h1 {
-        font-size:28px;
-      }
+    @media (max-width: 430px) {
 
       .wrap {
-        padding:12px;
+        padding: 10px;
       }
 
       header {
-        padding:24px 18px 20px;
+        padding: 23px 17px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .logo {
+        width: 68px;
+        height: 55px;
+      }
+
+      .service {
+        font-size: 12.5px;
+        padding: 8px 9px;
+      }
+
+      .service span {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 15px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
 <main class="wrap">
 
-  <!-- HEADER -->
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
   <header>
 
     <div class="brand">
 
       <div class="logo">
+
         <img
           src="washmart_logo_storefront_1.png"
           alt="Washmart logo"
         >
+
       </div>
 
+
       <div>
-        <h1>Washmart-Vaishali</h1>
+
+        <h1>
+          Washmart-Vaishali
+        </h1>
+
         <div class="tagline">
           Your Clothes, Our Care.
         </div>
+
       </div>
 
     </div>
 
+
     <div class="hero">
 
       <p>
-        Professional laundry, dry cleaning and fabric-care services
-        in Jaipur, with convenient pickup & drop.
+        Professional laundry, dry cleaning and fabric-care
+        services in Jaipur with convenient pickup & drop.
       </p>
+
 
       <div class="actions">
 
@@ -293,6 +499,7 @@
         >
           📞 Call Now
         </a>
+
 
         <a
           class="btn whatsapp"
@@ -310,173 +517,82 @@
   </header>
 
 
-  <!-- SERVICES -->
+
+  <!-- =========================================
+       SAVE CONTACT
+  ========================================== -->
+
   <section class="section">
 
-    <h2>Our Services</h2>
+    <h2>
+      Save Washmart Contact
+    </h2>
 
-    <div class="service-grid">
 
-      <div class="service">
-        <span>🧺</span>
-        Laundry / Wash
-      </div>
+    <p class="save-contact-description">
 
-      <div class="service">
-        <span>👔</span>
-        Dry Cleaning
-      </div>
+      Save Washmart's phone number, email and both
+      locations to your phone.
 
-      <div class="service">
-        <span>♨️</span>
-        Steam Ironing
-      </div>
+    </p>
 
-      <div class="service">
-        <span>🛋️</span>
-        Sofa Cleaning
-      </div>
 
-      <div class="service">
-        <span>🧹</span>
-        Carpet Cleaning
-      </div>
-
-      <div class="service">
-        <span>🚗</span>
-        Car Dry Cleaning
-      </div>
-
-      <div class="service">
-        <span>🪟</span>
-        Curtain Cleaning
-      </div>
-
-      <div class="service">
-        <span>🛏️</span>
-        Blanket Cleaning
-      </div>
-
-      <div class="service">
-        <span>👟</span>
-        Shoe Cleaning
-      </div>
-
-      <div class="service">
-        <span>🧸</span>
-        Toy Cleaning
-      </div>
-
-      <div class="service">
-        <span>🚚</span>
-        Pickup & Drop
-      </div>
-
-      <div class="service">
-        <span>📦</span>
-        Delivery
-      </div>
-
-    </div>
+    <a
+      class="btn save-contact-btn"
+      href="washmart-contact.vcf"
+    >
+      💾 Save Washmart Contact
+    </a>
 
   </section>
-<!-- SAVE CONTACT -->
-<section class="section">
-
-  <h2>Save Washmart Contact</h2>
-
-  <p
-    style="margin:0 0 14px;color:#64748b;font-size:14px;"
-  >
-    Save our contact details to your phone for easy access.
-  </p>
-
-  <a
-    class="btn"
-    style="background:#111827;color:#fff;width:100%;"
-    href="washmart-contact.vcf"
-  >
-    💾 Save Washmart Contact
-  </a>
-
-</section>
 
 
-<!-- APP -->
-<section class="section">
 
-  <h2>Get the Washmart App</h2>
+  <!-- =========================================
+       LOCATIONS
+  ========================================== -->
 
-  <div
-    class="actions"
-    style="margin-top:0;"
-  >
-
-    <a
-      class="btn primary"
-      href="https://play.google.com/store/apps/details?id=com.washmart.customer&hl=en_IN&pli=1"
-      target="_blank"
-      rel="noopener"
-    >
-      ▶️ Android App
-    </a>
-
-    <a
-      class="btn"
-      style="background:#111827;color:#fff;"
-      href="https://apps.apple.com/in/app/washmart/id6448946848"
-      target="_blank"
-      rel="noopener"
-    >
-       iPhone App
-    </a>
-
-  </div>
-
-  <a
-    class="btn"
-    style="margin-top:10px;background:#eef2ff;color:#1e3a8a;border-color:#dbeafe;"
-    href="https://washmart.in"
-    target="_blank"
-    rel="noopener"
-  >
-    🌐 Visit Washmart Website
-  </a>
-
-</section>
-
-    <!-- LOCATIONS -->
   <section class="section">
 
-    <h2>Our Locations</h2>
+    <h2>
+      Our Locations
+    </h2>
 
 
     <!-- MAIN STORE -->
+
     <div class="location">
 
       <strong>
         🏪 Washmart-Vaishali Main Store
       </strong>
 
-      <!-- FULL IMAGE - NO CROPPING -->
+
       <img
         class="location-image"
         src="washmart_main_store.png"
         alt="Washmart-Vaishali Main Store"
       >
 
+
       <div class="address">
-        Shop No. 104–105, Ridhi Nagar,
+
+        Shop No. 104–105,
+        Ridhi Nagar,
         Maharana Pratap Road,
         Near Rangoli Garden,
         Jaipur – 302034
+
       </div>
+
+
+      <!-- DIRECT GOOGLE MAPS PIN -->
 
       <a
         class="mapbtn"
+        href="https://maps.app.goo.gl/WdrcSngM5XSAbvBu7"
         target="_blank"
         rel="noopener"
-        href="https://www.google.com/maps/search/?api=1&query=Shop%20No.%20104-105%2C%20Ridhi%20Nagar%2C%20Maharana%20Pratap%20Road%2C%20Near%20Rangoli%20Garden%2C%20Jaipur%20302034"
       >
         📍 Get Directions
       </a>
@@ -484,34 +600,42 @@
     </div>
 
 
+
     <!-- VINAYAK MEDICALS -->
+
     <div class="location">
 
       <strong>
         📦 Collection / Pickup & Drop Point
       </strong>
 
-      <!-- FULL IMAGE - NO CROPPING -->
+
       <img
         class="location-image"
         src="vinayak_medicals_collection_point.png"
         alt="Vinayak Medicals Washmart Collection and Drop Point"
       >
 
+
       <div class="address">
+
         Vinayak Medicals,
         B-1,2, Yadav Chamber,
         Amrapali Nagar,
         Opp. Liquor Shop,
         Gandhi Path West,
         Vaishali Nagar, Jaipur
+
       </div>
+
+
+      <!-- DIRECT GOOGLE MAPS PIN -->
 
       <a
         class="mapbtn"
+        href="https://maps.app.goo.gl/tYuxY4qnqJHmouxs7"
         target="_blank"
         rel="noopener"
-        href="https://www.google.com/maps/search/?api=1&query=Vinayak%20Medicals%2C%20B-1%2C2%2C%20Yadav%20Chamber%2C%20Amrapali%20Nagar%2C%20Gandhi%20Path%20West%2C%20Vaishali%20Nagar%2C%20Jaipur"
       >
         📍 Get Directions
       </a>
@@ -521,24 +645,201 @@
   </section>
 
 
-  <!-- CONTACT -->
+
+  <!-- =========================================
+       SERVICES
+  ========================================== -->
+
   <section class="section">
 
-    <h2>Contact Washmart</h2>
+    <h2>
+      Our Services
+    </h2>
+
+
+    <div class="service-grid">
+
+
+      <div class="service">
+        <span>🧺</span>
+        <span>Laundry / Wash</span>
+      </div>
+
+
+      <div class="service">
+        <span>👔</span>
+        <span>Dry Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>♨️</span>
+        <span>Steam Ironing</span>
+      </div>
+
+
+      <div class="service">
+        <span>🛋️</span>
+        <span>Sofa Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>🧹</span>
+        <span>Carpet Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>🚗</span>
+        <span>Car Dry Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>🪟</span>
+        <span>Curtain Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>🛏️</span>
+        <span>Blanket Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>👟</span>
+        <span>Shoe Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>🧸</span>
+        <span>Toy Cleaning</span>
+      </div>
+
+
+      <div class="service">
+        <span>🚚</span>
+        <span>Pickup & Drop</span>
+      </div>
+
+
+      <div class="service">
+        <span>📦</span>
+        <span>Delivery</span>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       WASHMART APP
+  ========================================== -->
+
+  <section class="section">
+
+    <h2>
+      Get the Washmart App
+    </h2>
+
+
+    <div
+      class="actions"
+      style="margin-top:0;"
+    >
+
+
+      <!-- ANDROID -->
+
+      <a
+        class="btn primary"
+        href="https://play.google.com/store/apps/details?id=com.washmart.customer&hl=en_IN&pli=1"
+        target="_blank"
+        rel="noopener"
+      >
+        ▶️ Android App
+      </a>
+
+
+      <!-- IOS -->
+
+      <a
+        class="btn"
+        style="background:#111827;color:#fff;"
+        href="https://apps.apple.com/in/app/washmart/id6448946848"
+        target="_blank"
+        rel="noopener"
+      >
+         iPhone App
+      </a>
+
+
+    </div>
+
+
+    <!-- WEBSITE -->
+
+    <a
+      class="btn website-button"
+      href="https://washmart.in"
+      target="_blank"
+      rel="noopener"
+    >
+      🌐 Visit Washmart Website
+    </a>
+
+  </section>
+
+
+
+  <!-- =========================================
+       CONTACT
+  ========================================== -->
+
+  <section class="section">
+
+    <h2>
+      Contact Washmart
+    </h2>
+
 
     <div class="contact-row">
+
+
+      <!-- PHONE -->
 
       <a
         class="contact"
         href="tel:+917340054322"
       >
+
         <div>
-          <small>Phone / Call</small>
-          <b>7340054322</b>
+
+          <small>
+            Phone / Call
+          </small>
+
+          <b>
+            7340054322
+          </b>
+
         </div>
-        <span>📞</span>
+
+        <span>
+          📞
+        </span>
+
       </a>
 
+
+
+      <!-- WHATSAPP -->
 
       <a
         class="contact"
@@ -546,33 +847,67 @@
         target="_blank"
         rel="noopener"
       >
+
         <div>
-          <small>WhatsApp</small>
-          <b>Chat with Washmart</b>
+
+          <small>
+            WhatsApp
+          </small>
+
+          <b>
+            Chat with Washmart
+          </b>
+
         </div>
-        <span>💬</span>
+
+        <span>
+          💬
+        </span>
+
       </a>
 
+
+
+      <!-- EMAIL -->
 
       <a
         class="contact"
         href="mailto:vinayakenterprises.washmart@gmail.com"
       >
+
         <div>
-          <small>Email</small>
-          <b>vinayakenterprises.washmart@gmail.com</b>
+
+          <small>
+            Email
+          </small>
+
+          <b>
+            vinayakenterprises.washmart@gmail.com
+          </b>
+
         </div>
-        <span>📧</span>
+
+        <span>
+          📧
+        </span>
+
       </a>
+
 
     </div>
 
   </section>
 
 
+
+  <!-- FOOTER -->
+
   <footer>
+
     © Washmart-Vaishali • Your Clothes, Our Care.
+
   </footer>
+
 
 </main>
 
