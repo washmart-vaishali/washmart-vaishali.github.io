@@ -4,91 +4,589 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0f766e">
+
 <title>Washmart-Vaishali</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f3f7f6;color:#17201f;font-family:Arial,Helvetica,sans-serif}
-.container{max-width:760px;margin:auto;background:#fff;min-height:100vh;padding:18px}
-header{text-align:center;padding:12px 0 18px}.logo{width:92px;height:auto;display:block;margin:0 auto 10px}
-h1{margin:0;font-size:29px;color:#126b50}h2{font-size:21px;margin:0 0 10px;color:#123f35}
-p{line-height:1.5}.section{padding:18px 0;border-top:1px solid #e7eeec}
-.btn{display:block;text-align:center;text-decoration:none;border-radius:12px;padding:13px 14px;margin-top:10px;font-weight:700}
-.primary{background:#0f766e;color:#fff}.secondary{background:#e9f7f2;color:#075e4e}
-.mapbtn{display:inline-block;background:#0f766e;color:#fff;text-decoration:none;border-radius:9px;padding:9px 12px;font-size:13px;font-weight:700}
-.location{border:1px solid #e4ebe9;border-radius:14px;padding:12px;margin-top:12px}
-.location-image{width:100%;height:auto;display:block;object-fit:contain;border-radius:11px;margin-bottom:12px}
-.address{font-size:14px;color:#475552;line-height:1.45}
-.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.service{display:flex;align-items:center;gap:7px;padding:9px 10px;background:#f8fafc;border-radius:10px;font-weight:650;font-size:13px;line-height:1.25}
-.service span{font-size:18px;flex-shrink:0}.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.note{display:none;margin-top:10px;padding:11px 12px;background:#f8fafc;border-radius:10px;color:#53635f;font-size:12px;line-height:1.45}
-.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.small{font-size:13px;color:#5d6b68}
-footer{text-align:center;padding:22px 0 8px;color:#74817e;font-size:12px}
-@media(max-width:520px){.container{padding:14px}.app-grid,.contact-row{grid-template-columns:1fr}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f7f6;
+  color: #17201f;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 760px;
+  margin: auto;
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  padding: 12px 0 18px;
+}
+
+.logo {
+  width: 92px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 29px;
+  color: #126b50;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 0 0 10px;
+  color: #123f35;
+}
+
+h3 {
+  margin: 8px 0;
+  font-size: 17px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 18px 0;
+  border-top: 1px solid #e7eeec;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 13px 14px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.primary {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.secondary {
+  background: #e9f7f2;
+  color: #075e4e;
+}
+
+/* CALL + WHATSAPP */
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 9px;
+}
+
+.contact-buttons .btn {
+  margin-top: 0;
+}
+
+/* MAP BUTTON */
+
+.mapbtn {
+  display: inline-block;
+  background: #0f766e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* LOCATIONS */
+
+.location {
+  border: 1px solid #e4ebe9;
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.location-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 11px;
+  margin-bottom: 12px;
+}
+
+.address {
+  font-size: 14px;
+  color: #475552;
+  line-height: 1.45;
+}
+
+/* SERVICES */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 10px;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.service span {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* APP SECTION */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ANDROID / IOS HELP */
+
+.note {
+  display: none;
+  margin-top: 10px;
+  padding: 11px 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  color: #53635f;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* CONTACT */
+
+.small {
+  font-size: 13px;
+  color: #5d6b68;
+}
+
+footer {
+  text-align: center;
+  padding: 22px 0 8px;
+  color: #74817e;
+  font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+
+  .container {
+    padding: 14px;
+  }
+
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <main class="container">
+
+<!-- HEADER -->
+
 <header>
-<img class="logo" src="washmart_logo_storefront_1.png" alt="Washmart logo">
-<h1>Washmart-Vaishali</h1><p class="small">WASH | LAUNDRY | DRY CLEAN</p>
+
+  <img
+    class="logo"
+    src="washmart_logo_storefront_1.png"
+    alt="Washmart logo"
+  >
+
+  <h1>Washmart-Vaishali</h1>
+
+  <p class="small">
+    WASH | LAUNDRY | DRY CLEAN
+  </p>
+
 </header>
 
-<section class="section">
-<h2>Save Washmart Contact</h2>
-<p class="small">Save Washmart's phone number, email, website, both locations and directions.</p>
-<a id="saveContactBtn" class="btn primary" href="washmart-contact.vcf" download="Washmart-Vaishali.vcf">💾 Save Washmart Contact</a>
-<div id="androidHelp" class="note"><b>Android:</b> The contact file has been downloaded. Open <b>Washmart-Vaishali.vcf</b> from your Downloads/Files app. If Android asks which app to use, choose <b>Contacts</b> or <b>Import contacts</b>, then tap <b>Save</b>.</div>
-<div id="iosHelp" class="note"><b>iPhone:</b> If Safari downloads the file instead of opening it, tap the Downloads button in Safari and open <b>Washmart-Vaishali.vcf</b>.</div>
-</section>
+
+<!-- SAVE CONTACT + CALL + WHATSAPP -->
 
 <section class="section">
-<h2>Our Locations</h2>
-<div class="location">
-<img class="location-image" src="washmart_main_store.png" alt="Washmart-Vaishali main store">
-<h3>Washmart-Vaishali Main Store</h3>
-<p class="address">Shop No. 104–105, Ridhi Nagar, Maharana Pratap Road, Near Rangoli Garden, Jaipur – 302034</p>
-<a class="mapbtn" href="https://maps.app.goo.gl/WdrcSngM5XSAbvBu7" target="_blank" rel="noopener">📍 Get Directions</a>
-</div>
-<div class="location">
-<img class="location-image" src="vinayak_medicals_collection_point.png" alt="Vinayak Medicals collection point">
-<h3>Collection / Pickup &amp; Drop Point</h3>
-<p class="address">Vinayak Medicals, B-1,2, Yadav Chamber, Amrapali Nagar, Opp. Liquor Shop, Gandhi Path West, Vaishali Nagar, Jaipur</p>
-<a class="mapbtn" href="https://maps.app.goo.gl/tYuxY4qnqJHmouxs7" target="_blank" rel="noopener">📍 Get Directions</a>
-</div>
+
+  <h2>Save Washmart Contact</h2>
+
+  <p class="small">
+    Save Washmart's phone number, email, website, both locations and directions.
+  </p>
+
+  <!-- SAVE CONTACT -->
+
+  <a
+    id="saveContactBtn"
+    class="btn primary"
+    href="washmart-contact.vcf"
+    download="Washmart-Vaishali.vcf"
+  >
+    💾 Save Washmart Contact
+  </a>
+
+
+  <!-- CALL + WHATSAPP DIRECTLY BELOW -->
+
+  <div class="contact-buttons">
+
+    <a
+      class="btn primary"
+      href="tel:+917340054322"
+    >
+      📞 Call
+    </a>
+
+    <a
+      class="btn primary"
+      href="https://wa.me/917340054322"
+      target="_blank"
+      rel="noopener"
+    >
+      💬 WhatsApp
+    </a>
+
+  </div>
+
+
+  <!-- ANDROID HELP -->
+
+  <div id="androidHelp" class="note">
+
+    <b>Android:</b>
+    The contact file has been downloaded.
+
+    Open
+    <b>Washmart-Vaishali.vcf</b>
+    from your Downloads / Files app.
+
+    If Android asks which app to use, choose
+    <b>Contacts</b> or
+    <b>Import contacts</b>,
+    then tap <b>Save</b>.
+
+  </div>
+
+
+  <!-- IOS HELP -->
+
+  <div id="iosHelp" class="note">
+
+    <b>iPhone:</b>
+    If Safari downloads the file instead of opening it,
+    tap the Downloads button in Safari and open
+    <b>Washmart-Vaishali.vcf</b>.
+
+  </div>
+
 </section>
 
-<section class="section"><h2>Our Services</h2>
-<div class="service-grid">
-<div class="service"><span>👕</span>Laundry / Wash</div><div class="service"><span>🧥</span>Dry Cleaning</div>
-<div class="service"><span>♨️</span>Steam Ironing</div><div class="service"><span>🛋️</span>Sofa Cleaning</div>
-<div class="service"><span>🧶</span>Carpet Cleaning</div><div class="service"><span>🚗</span>Car Dry Cleaning</div>
-<div class="service"><span>🪟</span>Curtain Cleaning</div><div class="service"><span>🛏️</span>Blanket Cleaning</div>
-<div class="service"><span>🧸</span>Toy Cleaning</div><div class="service"><span>👟</span>Shoe Cleaning</div>
-<div class="service"><span>🛵</span>Pickup &amp; Drop</div><div class="service"><span>🧺</span>Complete Fabric Care</div>
-</div></section>
 
-<section class="section"><h2>Get the Washmart App</h2>
-<div class="app-grid">
-<a class="btn primary" href="https://play.google.com/store/apps/details?id=com.washmart.customer&amp;hl=en_IN&amp;pli=1" target="_blank" rel="noopener">▶ Download on Android</a>
-<a class="btn secondary" href="https://apps.apple.com/in/app/washmart/id6448946848" target="_blank" rel="noopener"> Download on iPhone / iOS</a>
-</div></section>
+<!-- LOCATIONS -->
 
-<section class="section"><h2>Contact Washmart</h2>
-<div class="contact-row">
-<a class="btn primary" href="tel:+917340054322">📞 Call</a>
-<a class="btn primary" href="https://wa.me/917340054322" target="_blank" rel="noopener">💬 WhatsApp</a>
-</div>
-<p class="small">📧 vinayakenterprises.washmart@gmail.com</p>
-<p class="small">🌐 <a href="https://washmart.in" target="_blank" rel="noopener">washmart.in</a></p>
+<section class="section">
+
+  <h2>Our Locations</h2>
+
+
+  <!-- MAIN STORE -->
+
+  <div class="location">
+
+    <img
+      class="location-image"
+      src="washmart_main_store.png"
+      alt="Washmart-Vaishali main store"
+    >
+
+    <h3>
+      Washmart-Vaishali Main Store
+    </h3>
+
+    <p class="address">
+      Shop No. 104–105, Ridhi Nagar,
+      Maharana Pratap Road,
+      Near Rangoli Garden,
+      Jaipur – 302034
+    </p>
+
+    <a
+      class="mapbtn"
+      href="https://maps.app.goo.gl/WdrcSngM5XSAbvBu7"
+      target="_blank"
+      rel="noopener"
+    >
+      📍 Get Directions
+    </a>
+
+  </div>
+
+
+  <!-- VINAYAK MEDICALS -->
+
+  <div class="location">
+
+    <img
+      class="location-image"
+      src="vinayak_medicals_collection_point.png"
+      alt="Vinayak Medicals collection point"
+    >
+
+    <h3>
+      Collection / Pickup & Drop Point
+    </h3>
+
+    <p class="address">
+      Vinayak Medicals, B-1,2,
+      Yadav Chamber, Amrapali Nagar,
+      Opp. Liquor Shop,
+      Gandhi Path West,
+      Vaishali Nagar, Jaipur
+    </p>
+
+    <a
+      class="mapbtn"
+      href="https://maps.app.goo.gl/tYuxY4qnqJHmouxs7"
+      target="_blank"
+      rel="noopener"
+    >
+      📍 Get Directions
+    </a>
+
+  </div>
+
 </section>
-<footer>© Washmart-Vaishali</footer>
+
+
+<!-- SERVICES -->
+
+<section class="section">
+
+  <h2>Our Services</h2>
+
+  <div class="service-grid">
+
+    <div class="service">
+      <span>👕</span>
+      Laundry / Wash
+    </div>
+
+    <div class="service">
+      <span>🧥</span>
+      Dry Cleaning
+    </div>
+
+    <div class="service">
+      <span>♨️</span>
+      Steam Ironing
+    </div>
+
+    <div class="service">
+      <span>🛋️</span>
+      Sofa Cleaning
+    </div>
+
+    <div class="service">
+      <span>🧶</span>
+      Carpet Cleaning
+    </div>
+
+    <div class="service">
+      <span>🚗</span>
+      Car Dry Cleaning
+    </div>
+
+    <div class="service">
+      <span>🪟</span>
+      Curtain Cleaning
+    </div>
+
+    <div class="service">
+      <span>🛏️</span>
+      Blanket Cleaning
+    </div>
+
+    <div class="service">
+      <span>🧸</span>
+      Toy Cleaning
+    </div>
+
+    <div class="service">
+      <span>👟</span>
+      Shoe Cleaning
+    </div>
+
+    <div class="service">
+      <span>🛵</span>
+      Pickup & Drop
+    </div>
+
+    <div class="service">
+      <span>🧺</span>
+      Complete Fabric Care
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- APP -->
+
+<section class="section">
+
+  <h2>Get the Washmart App</h2>
+
+  <div class="app-grid">
+
+    <a
+      class="btn primary"
+      href="https://play.google.com/store/apps/details?id=com.washmart.customer&hl=en_IN&pli=1"
+      target="_blank"
+      rel="noopener"
+    >
+      ▶ Download on Android
+    </a>
+
+    <a
+      class="btn secondary"
+      href="https://apps.apple.com/in/app/washmart/id6448946848"
+      target="_blank"
+      rel="noopener"
+    >
+       Download on iPhone / iOS
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section">
+
+  <h2>Contact Washmart</h2>
+
+  <p class="small">
+    📧 vinayakenterprises.washmart@gmail.com
+  </p>
+
+  <p class="small">
+    🌐
+    <a
+      href="https://washmart.in"
+      target="_blank"
+      rel="noopener"
+    >
+      washmart.in
+    </a>
+  </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+  © Washmart-Vaishali
+</footer>
+
 </main>
+
+
+<!-- ANDROID / IOS DETECTION -->
+
 <script>
-const btn=document.getElementById("saveContactBtn"),androidHelp=document.getElementById("androidHelp"),iosHelp=document.getElementById("iosHelp");
-const ua=navigator.userAgent||navigator.vendor||window.opera;
-const isAndroid=/Android/i.test(ua);
-const isIOS=/iPad|iPhone|iPod/i.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
-btn.addEventListener("click",()=>{if(isAndroid){androidHelp.style.display="block";iosHelp.style.display="none"}else if(isIOS){iosHelp.style.display="block";androidHelp.style.display="none"}});
+
+const saveContactBtn =
+  document.getElementById("saveContactBtn");
+
+const androidHelp =
+  document.getElementById("androidHelp");
+
+const iosHelp =
+  document.getElementById("iosHelp");
+
+
+const userAgent =
+  navigator.userAgent ||
+  navigator.vendor ||
+  window.opera;
+
+
+const isAndroid =
+  /Android/i.test(userAgent);
+
+
+const isIOS =
+  /iPad|iPhone|iPod/i.test(userAgent) ||
+  (
+    navigator.platform === "MacIntel" &&
+    navigator.maxTouchPoints > 1
+  );
+
+
+saveContactBtn.addEventListener("click", function () {
+
+  if (isAndroid) {
+
+    androidHelp.style.display = "block";
+
+    iosHelp.style.display = "none";
+
+  }
+
+  else if (isIOS) {
+
+    iosHelp.style.display = "block";
+
+    androidHelp.style.display = "none";
+
+  }
+
+});
+
 </script>
+
 </body>
 </html>
