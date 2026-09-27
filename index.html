@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Washmart Jaipur – laundry, dry cleaning, steam ironing, shoe, curtain cleaning and pickup & drop services.">
+  <title>Washmart Jaipur | Your Clothes, Our Care</title>
+  <style>
+    :root {
+      --ink:#111827; --muted:#64748b; --card:#ffffff; --bg:#f5f7fb;
+      --accent:#f59e0b; --accent2:#0f172a; --line:#e5e7eb; --green:#16a34a;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink); background:var(--bg); line-height:1.5;
+    }
+    .wrap { max-width:720px; margin:auto; padding:18px; }
+    header {
+      background:linear-gradient(135deg,#111827 0%,#1f2937 70%,#374151 100%);
+      color:#fff; border-radius:24px; padding:30px 22px 24px; margin-bottom:16px;
+      box-shadow:0 12px 30px rgba(15,23,42,.16);
+    }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .logo {
+      width:58px; height:58px; border-radius:16px; background:#fff; color:#111827;
+      display:grid; place-items:center; font-weight:900; font-size:18px; letter-spacing:-1px;
+    }
+    h1 { margin:0; font-size:31px; letter-spacing:-1px; }
+    .tagline { margin:3px 0 0; color:#dbeafe; font-size:15px; }
+    .hero { margin-top:22px; }
+    .hero p { margin:0; color:#e5e7eb; font-size:15px; }
+    .actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
+    .btn {
+      display:flex; align-items:center; justify-content:center; gap:8px; min-height:48px;
+      padding:12px 14px; border-radius:14px; text-decoration:none; font-weight:750;
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .primary { background:var(--accent); color:#111827; }
+    .whatsapp { background:var(--green); color:#fff; }
+    .section {
+      background:var(--card); border:1px solid var(--line); border-radius:20px;
+      padding:20px; margin:14px 0; box-shadow:0 5px 18px rgba(15,23,42,.05);
+    }
+    h2 { margin:0 0 14px; font-size:20px; }
+    .service-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .service { padding:14px; background:#f8fafc; border-radius:14px; font-weight:650; }
+    .service span { display:block; font-size:22px; margin-bottom:5px; }
+    .location { padding:15px; border:1px solid var(--line); border-radius:15px; margin-top:11px; }
+    .location strong { display:block; margin-bottom:5px; }
+    .address { color:var(--muted); font-size:14px; margin-bottom:11px; }
+    .mapbtn {
+      display:inline-flex; align-items:center; gap:7px; padding:10px 13px; border-radius:11px;
+      background:#eff6ff; color:#1d4ed8; text-decoration:none; font-weight:700; font-size:14px;
+    }
+    .contact-row { display:flex; flex-direction:column; gap:10px; }
+    .contact {
+      display:flex; justify-content:space-between; align-items:center; gap:12px;
+      padding:13px 14px; background:#f8fafc; border-radius:13px; text-decoration:none; color:inherit;
+    }
+    .contact small { display:block; color:var(--muted); }
+    .contact b { font-size:15px; overflow-wrap:anywhere; }
+    footer { text-align:center; color:var(--muted); font-size:13px; padding:10px 0 24px; }
+    @media (max-width:430px) {
+      .service-grid { grid-template-columns:1fr; }
+      h1 { font-size:28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">WM</div>
+        <div>
+          <h1>Washmart</h1>
+          <div class="tagline">Your Clothes, Our Care.</div>
+        </div>
+      </div>
+      <div class="hero">
+        <p>Professional laundry, dry cleaning and fabric-care services in Jaipur, with convenient pickup & drop.</p>
+        <div class="actions">
+          <a class="btn primary" href="tel:+917340054322">📞 Call Now</a>
+          <a class="btn whatsapp" href="https://wa.me/917340054322?text=Hi%20Washmart%2C%20I%20want%20to%20book%20a%20service.">💬 WhatsApp</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service"><span>🧺</span>Laundry / Wash</div>
+        <div class="service"><span>👔</span>Dry Cleaning</div>
+        <div class="service"><span>♨️</span>Steam Iron</div>
+        <div class="service"><span>👟</span>Shoe Cleaning</div>
+        <div class="service"><span>🪟</span>Curtain Cleaning</div>
+        <div class="service"><span>🚚</span>Pickup & Drop</div>
+        <div class="service"><span>📍</span>Collection Point</div>
+        <div class="service"><span>📦</span>Delivery</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Our Locations</h2>
+
+      <div class="location">
+        <strong>🏪 Washmart Main Store</strong>
+        <div class="address">Shop No. 104–105, Ridhi Nagar, Maharana Pratap Road, Near Rangoli Garden, Jaipur – 302034</div>
+        <a class="mapbtn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Shop%20No.%20104-105%2C%20Ridhi%20Nagar%2C%20Maharana%20Pratap%20Road%2C%20Near%20Rangoli%20Garden%2C%20Jaipur%20302034">
+          📍 Get Directions
+        </a>
+      </div>
+
+      <div class="location">
+        <strong>📦 Collection / Pickup & Drop Point</strong>
+        <div class="address">Vinayak Medicals, B-1,2, Yadav Chamber, Amrapali Nagar, Opp. Liquor Shop, Gandhi Path West, Vaishali Nagar, Jaipur</div>
+        <a class="mapbtn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Vinayak%20Medicals%2C%20B-1%2C2%2C%20Yadav%20Chamber%2C%20Amrapali%20Nagar%2C%20Gandhi%20Path%20West%2C%20Vaishali%20Nagar%2C%20Jaipur">
+          📍 Get Directions
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact Washmart</h2>
+      <div class="contact-row">
+        <a class="contact" href="tel:+917340054322">
+          <div><small>Phone / Call</small><b>7340054322</b></div><span>📞</span>
+        </a>
+        <a class="contact" href="https://wa.me/917340054322?text=Hi%20Washmart%2C%20I%20want%20to%20book%20a%20service." target="_blank" rel="noopener">
+          <div><small>WhatsApp</small><b>Chat with Washmart</b></div><span>💬</span>
+        </a>
+        <a class="contact" href="mailto:vinayakenterprises.washmart@gmail.com">
+          <div><small>Email</small><b>vinayakenterprises.washmart@gmail.com</b></div><span>📧</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>© Washmart Jaipur • Your Clothes, Our Care.</footer>
+  </main>
+</body>
+</html>
