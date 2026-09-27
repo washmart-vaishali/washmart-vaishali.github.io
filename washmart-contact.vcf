@@ -6,5 +6,9 @@ TEL;TYPE=CELL:+917340054322
 EMAIL;TYPE=WORK:vinayakenterprises.washmart@gmail.com
 URL:https://washmart-vaishali.github.io
 URL:https://washmart.in
-NOTE:Washmart-Vaishali - Laundry, Dry Cleaning, Sofa Cleaning, Carpet Cleaning, Curtain Cleaning, Blanket Cleaning, Toy Cleaning, Car Dry Cleaning, Shoe Cleaning, Pickup & Drop
+ADR;TYPE=WORK:;;Shop No. 104-105, Ridhi Nagar, Maharana Pratap Road, Near Rangoli Garden;Jaipur;;302034;India
+LABEL;TYPE=WORK:Washmart-Vaishali Main Store: Shop No. 104-105, Ridhi Nagar, Maharana Pratap Road, Near Rangoli Garden, Jaipur - 302034
+ADR;TYPE=WORK:;;Vinayak Medicals, B-1,2, Yadav Chamber, Amrapali Nagar, Opp. Liquor Shop, Gandhi Path West, Vaishali Nagar;Jaipur;;;India
+LABEL;TYPE=WORK:Collection/Pickup & Drop: Vinayak Medicals, B-1,2, Yadav Chamber, Amrapali Nagar, Opp. Liquor Shop, Gandhi Path West, Vaishali Nagar, Jaipur
+NOTE:Washmart-Vaishali Main Store: https://maps.app.goo.gl/WdrcSngM5XSAbvBu7 | Collection/Pickup & Drop: https://maps.app.goo.gl/tYuxY4qnqJHmouxs7
 END:VCARD
